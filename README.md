@@ -1,93 +1,46 @@
-# Flutter Location Screen
+# Location Screen Feature in Flutter
 
-A simple Flutter app that retrieves and displays the user’s current location using the **Geolocator** package. The app prompts the user for location permissions and updates the location dynamically on the screen as the user moves.
+## Overview
+This feature allows users to track and view the current location and traveled routes of individual members in a clear and interactive way. It displays locations on a map and provides a timeline of all visited places, with options to filter by date and view travel details.
 
-## Features
+## Key Features
 
-- **Retrieves the user’s current location**: Uses the Geolocator package to fetch the latitude and longitude.
-- **Real-time updates**: Automatically updates the location on the screen as the user changes location.
-- **Handles location permissions**: Asks the user for permission to access the location and shows an error message if access is denied.
+1. *Attendance List*  
+   - *Access: Start by going to the **Attendance* section from the menu. Here, you'll see a list of members, each with two icons on the right.
+   - *Check Location: The **second icon* lets you see the current location and travel history of a member.
 
-## Screenshots
+2. *View Member’s Location and Timeline*  
+   - *Map View: Clicking the location icon will open a map showing the member’s **current location*.
+   - *Timeline: At the bottom, you'll see a timeline that lists all places the member visited **today*. You can also pull the list upward to see more.
+   - *Date Filter*: Want to check past data? Just use the date filter to view visited locations on previous days.
 
-(You can include screenshots of your app here.)
+3. *Route Generation*  
+   - *Route Between Two Locations*: You can select any two visited locations, and the system will generate the route between them.
+     - *Details Shown*:
+       - *Start Location*
+       - *Stop Location*
+       - *Total Distance* (in kilometers)
+       - *Total Travel Time*
+   - *Map View: The map will display the entire route, marked with **red dots* where the member stopped for more than *10 minutes*.
 
-## Getting Started
+## Screens Overview
 
-### Prerequisites
+1. *Attendance Screen*:  
+   - Lists members with icons to access their current location and travel routes.
 
-Ensure you have the following installed on your machine:
+2. *Location & Timeline View*:  
+   - Shows a map with the current location of the member and a timeline of visited locations for today (or past dates with the filter).
 
-- Flutter SDK
-- A code editor (e.g., VS Code or Android Studio)
-- Android/iOS Emulator or a physical device
+3. *Route Screen*:  
+   - Displays the route between two selected locations, showing details like start/stop points, distance, and travel time. The full route is drawn on the map, with stop markers for extended pauses.
 
-### Installation
+## How to Use
 
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/mandeep888/Vinove-assignment.git
-   cd Vinove-assignment
-   ```
+1. Go to the *Attendance* section and click on the second icon next to a member.
+2. View their *current location* on the map and scroll through the timeline to see all the places they visited today.
+3. To see the route between any two locations, select them, and you'll get a detailed map view with travel stats.
 
-2. **Install dependencies**:
-   Open the `pubspec.yaml` file and ensure the following dependencies are included:
+## Conclusion
+This feature provides a simple, interactive way to track a member's movements, showing their current location, visited places, and full travel routes, complete with important details like distance, time, and stops.
 
-   ```yaml
-   dependencies:
-     flutter:
-       sdk: flutter
-     geolocator: ^9.0.2
-   ```
-
-   Then, run the following command in your terminal:
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**:
-   To launch the app, run:
-   ```bash
-   flutter run
-   ```
-
-### Usage
-
-Once the app is running:
-
-1. Upon launch, the app will ask for location permissions. Allow the app to access your location.
-2. The screen will display your current latitude and longitude.
-3. As you move, the location information will update automatically.
-
-### Handling Permissions
-
-If location access is denied, the app will display an error message. Make sure to include location permission in both Android and iOS configurations:
-
-#### Android
-Open `android/app/src/main/AndroidManifest.xml` and add the following permissions:
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-```
-
-#### iOS
-In `ios/Runner/Info.plist`, add the following keys:
-
-```xml
-<key>NSLocationWhenInUseUsageDescription</key>
-<string>We need your location to show your current position.</string>
-```
-
-## Built With
-
-- **Flutter**: Framework for building natively compiled applications.
-- **Geolocator**: Flutter plugin for accessing location information.
-
-## Contributing
-
-Feel free to contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
