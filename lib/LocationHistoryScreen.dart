@@ -32,7 +32,10 @@ class _LocationHistoryScreenState extends State<LocationHistoryScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -230,39 +233,50 @@ class _LocationHistoryScreenState extends State<LocationHistoryScreen> {
                       child: ListView(
                         controller: scrollController,
                         children: [
-                          _buildTimelineTile(context,
-                              "2715 Ash Dr. San Jose, South Dakota 83475",
-                              "Left at 08:30 am",
+                          _buildTimelineTile(
+                              context,
+                              "1234 Maple St. Brooklyn, New York 11215",
+                              "Left at 07:45 am",
                               false),
-                          _buildTimelineTile(context,
-                              "1901 Thornridge Cir. Shiloh, Hawaii 81063",
-                              "09:45 am - 12:45 pm",
+                          _buildTimelineTile(
+                              context,
+                              "4321 Oak Ln. Houston, Texas 77001",
+                              "08:50 am - 10:30 am",
                               false),
-                          _buildTimelineTile(context,
-                              "412 N College Ave, College Place, WA, US",
-                              "02:15 pm - 02:30 pm",
+                          _buildTimelineTile(
+                              context,
+                              "789 Pine Rd, Seattle, Washington 98109",
+                              "11:00 am - 11:30 am",
                               false),
-                          _buildTimelineTile(context,
-                              "PH Sales & Marketing 4 Benoi Crescent",
-                              "03:00 pm - 03:25 pm",
+                          _buildTimelineTile(
+                              context,
+                              "Sunrise Plaza 22 Sunshine Blvd, Miami, FL 33101",
+                              "12:15 pm - 12:45 pm",
                               false),
-                          _buildTimelineTile(context,
-                              "6 Rue Jean-Louis Grivaz 74000 Annecy",
-                              "04:00 pm - 04:15 pm",
+                          _buildTimelineTile(
+                              context,
+                              "305 Beach St. Venice, California 90291",
+                              "01:20 pm - 01:45 pm",
                               false),
-                          _buildTimelineTile(context,"4517 Washington Ave. Manchester",
-                              "05:00 pm - 06:00 pm", false),
-                          _buildTimelineTile(context,
-                              "67B Gregorio Grove, Jaskolskiville",
-                              "06:15 pm - 06:45 pm",
+                          _buildTimelineTile(
+                              context,
+                              "985 Elm Dr. Los Angeles, CA 90001",
+                              "02:30 pm - 03:30 pm",
                               false),
-                          _buildTimelineTile(context,
-                              "4539 Conowingo Rd, Darlington, Maryland",
-                              "07:25 pm - 07:30 pm",
+                          _buildTimelineTile(
+                              context,
+                              "768 Birch Grove, Madison, Wisconsin 53703",
+                              "03:50 pm - 04:15 pm",
                               false),
-                          _buildTimelineTile(context,
-                              "2715 Ash Dr. San Jose, South Dakota 83475",
-                              "08:05 pm",
+                          _buildTimelineTile(
+                              context,
+                              "45 Sunset Blvd, Malibu, California 90265",
+                              "05:00 pm - 05:30 pm",
+                              false),
+                          _buildTimelineTile(
+                              context,
+                              "1234 Maple St. Brooklyn, New York 11215",
+                              "06:05 pm",
                               false),
                         ],
                       ),
@@ -279,7 +293,8 @@ class _LocationHistoryScreenState extends State<LocationHistoryScreen> {
 }
 
 // Custom function to build each timeline tile
-Widget _buildTimelineTile(BuildContext context, String title, String subtitle, bool isFirst) {
+Widget _buildTimelineTile(
+    BuildContext context, String title, String subtitle, bool isFirst) {
   return ListTile(
     leading: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -299,7 +314,8 @@ Widget _buildTimelineTile(BuildContext context, String title, String subtitle, b
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => RouteScreen(Member("Mandeep Singh", "MSJ888", "Online", "12345", "9828")),
+            builder: (context) => RouteScreen(
+                Member("Mandeep Singh", "MSJ888", "Online", "12345", "9828")),
           ),
         );
       },
