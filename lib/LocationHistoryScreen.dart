@@ -292,33 +292,4 @@ class _LocationHistoryScreenState extends State<LocationHistoryScreen> {
   }
 }
 
-// Custom function to build each timeline tile
-Widget _buildTimelineTile(
-    BuildContext context, String title, String subtitle, bool isFirst) {
-  return ListTile(
-    leading: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(Icons.circle, color: Color(0xFF42329E), size: 10),
-        if (!isFirst) Container(height: 40, width: 2, color: Color(0xFF42329E)),
-      ],
-    ),
-    title: Text(
-      title,
-      style: TextStyle(fontWeight: FontWeight.bold),
-    ),
-    subtitle: Text(subtitle),
-    trailing: IconButton(
-      icon: Icon(Icons.chevron_right),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => RouteScreen(
-                Member("Mandeep Singh", "MSJ888", "Online", "12345", "9828")),
-          ),
-        );
-      },
-    ),
-  );
-}
+//debugging
